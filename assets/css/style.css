@@ -68,7 +68,7 @@
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(0, 0%, 100%);
-  --vegas-gold: rgba(216, 216, 216, 0.6);
+  --vegas-gold: #888888;
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -126,12 +126,18 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a { text-decoration: none;}
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, ion-icon, a, button, time { display: block; }
 
+span {
+  display: flex;
+}
+span img {
+  margin-right: 3px;
+}
 button {
   font: inherit;
   background: none;
@@ -154,7 +160,11 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html {
+  font-family: var(--ff-poppins); 
+  min-height: 100%;
+  margin: 0;
+}
 
 body {
   background: radial-gradient(
@@ -165,7 +175,14 @@ body {
   );
 }
 
-
+@keyframes animate {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
 
 
 
@@ -364,7 +381,7 @@ main {
   position: absolute;
   top: -15px;
   right: -15px;
-  border-radius: 0 15px;
+  border-radius: 0 0 0 15px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
   background: var(--border-gradient-onyx);
