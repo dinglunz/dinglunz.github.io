@@ -162,3 +162,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function toggleModal() {
+  const modalContainer = document.querySelector('.modal-container');
+  const overlay = document.querySelector('.overlay');
+
+  modalContainer.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+function closeModal() {
+  const modalContainer = document.querySelector('.modal-container');
+  const overlay = document.querySelector('.overlay');
+
+  modalContainer.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
