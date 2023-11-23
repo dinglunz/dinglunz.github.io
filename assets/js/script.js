@@ -179,3 +179,13 @@ function closeModal() {
   overlay.classList.remove('active');
 }
 
+function toggleIcon(button) {
+  var icon = button.querySelector('ion-icon');
+  if (icon.name === 'chevron-down') {
+    icon.name = 'chevron-up';
+  } else {
+    icon.name = 'chevron-down';
+  }
+}
+
+
