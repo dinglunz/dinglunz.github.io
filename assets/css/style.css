@@ -177,10 +177,22 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  background: radial-gradient(
+    ellipse at left bottom, 
+    #181818,
+    rgba(38, 20, 72, .9) 59%,
+    rgba(17, 27, 75, .9) 100%
+  );
+  background-attachment: scroll;
+}
+body:before {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background: radial-gradient(
     ellipse at left bottom, 
     #181818,
@@ -188,6 +200,7 @@ body {
     rgba(17, 27, 75, .9) 100%
   );
 }
+
 
 css-doodle {
   position: fixed;
